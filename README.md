@@ -1,4 +1,4 @@
-# React Nice NFTs :page_with_curl:
+# Silly Squares Site :page_with_curl:
 
 This repo is the frontend React website / webapp for the Silly Squares Club.
 
