@@ -1,22 +1,22 @@
 {
   "main": {
     "name":"Silly Squares Club",
-    "description":"An awesome NFT project",
+    "description":"Awesome NFTs, people, and perks",
     "image":"profilepic.jpg",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "bio":"Silly Squares Club began as just a silly idea Jim had one day after hearing yet again about some generative art NFT collection that was simply \"images on the blockchain\". While Silly Squares is silly on the surface, it pushes the boundary of what's possible with NFTs and give holders exclusive access to hidden sections on this website, free swag, personalized consulting sessions with Jim, and more!",
+    "contactmessage":"We'd love to hear from you! You can email us, call us, and even send us a postcard!",
     "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
-    "github":"https://github.com/nordicgiant2/react-nice-resume",
-    "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "phone": "917-745-3133",
+    "enterClubLink":"/members",
+    "purchaseLink":"https://opensea.io/collection/silly-squares-club",
     "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+      "street":"711 E 2nd Ave",
+      "city":"New York",
+      "state":"New York",
+      "zip": "10016"
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
+    "website": "",
+    "resumedownload":"",
     "social":[
       {
         "name":"facebook",
@@ -49,30 +49,32 @@
     "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
     "education":[
       {
-        "school":"University?",
-        "degree":"Masters in Beer tasting",
-        "graduated":"April 2017",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "school":"SILLY SQUARES CLUB",
+        "degree":"The original silly squares collection.",
+        "graduated":"Total Supply: 250",
+        "openSeaLink": "https://opensea.io/collection/silly-squares-club"
       },
       {
-        "school":"School #1 Maybe College?",
-        "degree":"What did you study 101",
-        "graduated":"March 2013",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "school":"SILLY SQUARES SUMMERTIME",
+        "degree":"A tribute to that summertime feeling.",
+        "graduated":"Total Supply: 2500",
+        "openSeaLink": "https://opensea.io/collection/silly-squares-summertime"
       }
     ],
     "work":[
       {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"March 2018 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company":"Solidity Expertise",
+        "title":"Clean code that works",
+        "years":"https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "contractLink":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
+        "description": "Lead developer Jim Lynch has been studying and teaching Solidity coding and unit testing, and he practices what he preaches! This project is a living example of how to leverage the tools of Consensys, OpenZeppelin, and other great open-source projects to build something awesome and secure!"
       },
       {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2017 - February 2018",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company":"Built On Polygon",
+        "title":"Say goodbye to gas fees",
+        "years":"https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "contractLink": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
+        "description": "ALL Silly Squares NFTs have been deployed on the Polygon blockchain, a layer 2 Ethereum blockchain. The key advantage of this is that gas costs to trade and list these NFTs are INSANELY LOW! (like less than one cent USD per transaction)."
       }
     ],
     "skills":[
@@ -107,6 +109,28 @@
     ]
   },
   "portfolio":{
+    "team": [
+      {
+        "name": "Jim",
+        "img": "01.jpg",
+        "link": "twitter.com/jimlynchcodes"
+      },
+      {
+        "name": "Brodi",
+        "img": "01.jpg",
+        "link": "twitter.com/jimlynchcodes"
+      },
+      {
+        "name": "Craig",
+        "img": "01.jpg",
+        "link": "twitter.com/jimlynchcodes"
+      },
+      {
+        "name": "Mary Jane",
+        "img": "01.jpg",
+        "link": "twitter.com/jimlynchcodes"
+      }
+    ],
     "projects": [
       {
         "title":"Canadian Wanderlust",
@@ -127,7 +151,7 @@
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Resume Website",
+        "title":"NFTs Website",
         "category":"A React based resume website template",
         "image":"04.jpg",
         "url":"http://www.timbakerdev.com"
@@ -163,7 +187,7 @@
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Resume Website",
+        "title":"NFTs Website",
         "category":"A React based resume website template",
         "image":"04.jpg",
         "url":"http://www.timbakerdev.com"

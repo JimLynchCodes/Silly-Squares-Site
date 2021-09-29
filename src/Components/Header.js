@@ -6,8 +6,8 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
+    const purchase = this.props.data.purchaseLink;
+    const enterClubLink = this.props.data.enterClubLink;
     const name = this.props.data.name;
     const description = this.props.data.description;
 
@@ -38,13 +38,13 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                NFTs
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Works
+                Team
               </a>
             </li>
 
@@ -61,17 +61,18 @@ class Header extends Component {
             <Fade bottom>
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
+            <br/>
             <Fade bottom duration={1200}>
               <h3>{description}.</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={purchase} className="button btn project-btn">
+                  <i className="fa fa-book"></i>Purchase Silly Squares
                 </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
+                <a href={enterClubLink} className="button btn github-btn">
+                  <i className="fa fa-globe"></i>Enter The Club
                 </a>
               </ul>
             </Fade>

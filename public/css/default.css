@@ -53,7 +53,9 @@ time, mark, audio, video {
    padding: 0;
    border: 0;
    outline: 0;
-   font-size: 100%;
+   font-size: 106%;
+   line-height: 130%;
+
    vertical-align: baseline;
    background: transparent;
 }
@@ -312,7 +314,7 @@ ul ul, ul ol,
 ol ol, ol ul { margin: 6px 0 6px 30px; }
 ul ul li, ul ol li,
 ol ol li, ol ul li { margin-bottom: 6px; }
-li { line-height: 18px; margin-bottom: 12px; }
+li { line-height: 40px; margin-bottom: 25px; }
 ul.large li { }
 li p { }
 

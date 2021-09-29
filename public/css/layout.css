@@ -9,7 +9,7 @@
    a. General Styles
    b. Header Styles
    c. About Section
-   d. Resume Section
+   d. NFTs Section
    e. Portfolio Section
    f. Call To Action Section
    g. Testimonials Section
@@ -204,7 +204,7 @@ ul#nav li.current a { color: #fe6928; }
    position: relative;
    width: 120px;
    height: 120px;
-   border-radius: 100%;
+   border-radius: 70%;
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
@@ -227,7 +227,7 @@ ul#nav li.current a { color: #fe6928; }
 
 
 /* ------------------------------------------------------------------ */
-/* d. Resume Section
+/* d. NFTs Section
 /* ------------------------------------------------------------------ */
 
 #resume {

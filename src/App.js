@@ -5,7 +5,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Resume from "./Components/Resume";
+import NFTs from "./Components/NFTs";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 import { ethers } from "ethers";
@@ -17,7 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       foo: "bar",
-      resumeData: {},
+      homePageData: {},
       sillySquaresContract: undefined,
       signer: undefined,
       currentUserAddress: '',
@@ -27,7 +27,7 @@ class App extends Component {
       mintCostWei: 0,
     };
 
-    this.getResumeData();
+    this.getHomePageData();
 
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
@@ -39,14 +39,21 @@ class App extends Component {
 
     console.log('mounting...');
 
+    window.ethereum.enable();
+
     const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-    // Gets the public address of currently connected metamask user
-    const signer = provider.getSigner();
-    const signerAddress = await signer.getAddress();
-    console.log({ signerAddress });
+    // if (provider)
 
-    this.setState({ signer, currentUserAddress: signerAddress })
+    console.log({ provider })
+  
+    // Gets the public address of currently connected metamask user
+    const signer =  provider.getSigner();
+
+    const signerAddress = await signer.getAddress();
+    // console.log({ signerAddress });
+
+    // this.setState({ signer, currentUserAddress: signerAddress })
 
     // const balance = await provider.getBalance();
     // console.log({ balance })
@@ -116,13 +123,13 @@ class App extends Component {
 
   }
 
-  getResumeData() {
+  getHomePageData() {
     $.ajax({
-      url: "./resumeData.json",
+      url: "./homePageData.json",
       dataType: "json",
       cache: false,
       success: function (data) {
-        this.setState({ resumeData: data });
+        this.setState({ homePageData: data });
       }.bind(this),
       error: function (xhr, status, err) {
         console.log(err);
@@ -134,13 +141,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <button onClick={() => this.mintTokens(2)}>Mint!!</button>
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
-        <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
+        <Header data={this.state.homePageData.main} />
+        {/* <button onClick={() => this.mintTokens(2)}>Mint!!</button> */}
+        <About data={this.state.homePageData.main} />
+        <NFTs data={this.state.homePageData.resume} />
+        <Portfolio data={this.state.homePageData.portfolio} />
+        <Contact data={this.state.homePageData.main} />
+        <Footer data={this.state.homePageData.main} />
       </div>
     );
   }
