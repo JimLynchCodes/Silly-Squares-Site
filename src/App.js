@@ -8,8 +8,10 @@ import About from "./Components/About";
 import NFTs from "./Components/NFTs";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
+import Mint from "./Components/Mint";
 import { ethers } from "ethers";
 import SillySqauresABI from './contract-ABIs/Silly_Squares_NFT_ABI.json';
+import ExclusiveContent from "./Components/ExclusiveContent";
 
 class App extends Component {
 
@@ -19,12 +21,15 @@ class App extends Component {
       foo: "bar",
       homePageData: {},
       sillySquaresContract: undefined,
+      nftContractWithSigner: undefined,
       signer: undefined,
       currentUserAddress: '',
       contractOwnerAddress: '',
       sillySquareBalance: 0,
       mintCostEth: 0,
       mintCostWei: 0,
+      totalSupply: 0,
+      totalAlreadyMinted: 0
     };
 
     this.getHomePageData();
@@ -35,7 +40,6 @@ class App extends Component {
   }
 
   async componentDidMount() {
-
 
     console.log('mounting...');
 
@@ -53,7 +57,7 @@ class App extends Component {
     const signerAddress = await signer.getAddress();
     // console.log({ signerAddress });
 
-    // this.setState({ signer, currentUserAddress: signerAddress })
+    this.setState({ signer, currentUserAddress: signerAddress })
 
     // const balance = await provider.getBalance();
     // console.log({ balance })
@@ -71,11 +75,15 @@ class App extends Component {
       provider
     );
 
-    // const contractWithSigner = await sillySquaresContract.connect(signer);
-
     this.setState({ sillySquaresContract });
 
-    console.log({ sillySquaresContract })
+    // const nftContractWithSigner = await sillySquaresContract.connect(this.state.signer);
+
+    // const contractWithSigner = await sillySquaresContract.connect(signer);
+
+    // this.setState({ nftContractWithSigner });
+
+    // console.log({ sillySquaresContract })
 
     // Gets current user's balance of SILLY_SQUARES_CLUB tokens
     //  (ie. how many of these NFTs the user owns)
@@ -88,7 +96,9 @@ class App extends Component {
     // Checks who is the contract owner (to know if you need to send payment when minting)
     const contractOwnerAddress = await sillySquaresContract.owner();
 
-    console.log({ contractOwnerAddress })
+    console.log('got owner')
+
+    console.log({ contractOwnerAddress: contractOwnerAddress })
     this.setState({ contractOwnerAddress })
 
     // Checks the price for minting a token
@@ -97,6 +107,16 @@ class App extends Component {
 
     console.log({ mintCostEth })
     this.setState({ mintCostEth, mintCostWei })
+
+    const totalAlreadyMinted = await sillySquaresContract.totalSupply();
+    this.setState({ totalAlreadyMinted: ethers.utils.formatUnits(totalAlreadyMinted, 'wei') })
+
+    
+    const totalSupply = await sillySquaresContract.maxSupply();
+
+    console.log('max supply! ',ethers.utils.formatUnits(totalSupply, 'wei') )
+
+    this.setState({ totalSupply: ethers.utils.formatUnits(totalSupply, 'wei') })
 
   }
 
@@ -117,9 +137,9 @@ class App extends Component {
     console.log('args')
     console.log(this.state.currentUserAddress, tokensToMint, overrides)
 
-    const n = this.state.sillySquaresContract.connect(this.state.signer);
+    // const n = this.state.sillySquaresContract.connect(this.state.signer);
 
-    await n.mint(this.state.currentUserAddress, tokensToMint, overrides);
+    // await n.mint(this.state.currentUserAddress, tokensToMint, overrides);
 
   }
 
@@ -142,10 +162,27 @@ class App extends Component {
     return (
       <div className="App">
         <Header data={this.state.homePageData.main} />
-        {/* <button onClick={() => this.mintTokens(2)}>Mint!!</button> */}
+        <br/>
+        <br/>
+        <br/>
+        <button onClick={() => this.mintTokens(2)}>Mint!!</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <About data={this.state.homePageData.main} />
         <NFTs data={this.state.homePageData.resume} />
         <Portfolio data={this.state.homePageData.portfolio} />
+        <Mint data={this.state.homePageData.resume}
+                    nftContract={this.state.sillySquaresContract}
+                    signer={this.state.signer}
+                    userAddress={this.state.currentUserAddress}
+                    contractOwnerAddress={this.state.contractOwnerAddress}
+                    totalAlreadyMinted={this.state.totalAlreadyMinted}
+                    totalSupply={this.state.totalSupply}
+        />
+        <ExclusiveContent sillySquareBalance={this.state.sillySquareBalance} />
         <Contact data={this.state.homePageData.main} />
         <Footer data={this.state.homePageData.main} />
       </div>
