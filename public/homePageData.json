@@ -9,6 +9,8 @@
     "phone": "917-745-3133",
     "enterClubLink":"/members",
     "purchaseLink":"https://opensea.io/collection/silly-squares-club",
+    "purchaseSquaresClubLink": "https://opensea.io/collection/silly-squares-club",
+    "purchaseSquaresSummertimeLink": "https://opensea.io/collection/silly-squares-summertime",
     "address":{
       "street":"711 E 2nd Ave",
       "city":"New York",
@@ -52,13 +54,17 @@
         "school":"SILLY SQUARES CLUB",
         "degree":"The original silly squares collection.",
         "graduated":"Total Supply: 250",
-        "openSeaLink": "https://opensea.io/collection/silly-squares-club"
+        "openSeaLink": "https://opensea.io/collection/silly-squares-club",
+        "contractAddress": "0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8",
+        "polygonscanLink": "https://polygonscan.com/address/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8"
       },
       {
         "school":"SILLY SQUARES SUMMERTIME",
         "degree":"A tribute to that summertime feeling.",
         "graduated":"Total Supply: 2500",
-        "openSeaLink": "https://opensea.io/collection/silly-squares-summertime"
+        "openSeaLink": "https://opensea.io/collection/silly-squares-summertime",
+        "contractAddress": "0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "polygonscanLink": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3"
       }
     ],
     "work":[
@@ -113,22 +119,22 @@
       {
         "name": "Jim",
         "img": "01.jpg",
-        "link": "twitter.com/jimlynchcodes"
+        "link": "https://twitter.com/jimlynchcodes"
       },
       {
         "name": "Brodi",
         "img": "01.jpg",
-        "link": "twitter.com/jimlynchcodes"
+        "link": "https://twitter.com/jimlynchcodes"
       },
       {
         "name": "Craig",
         "img": "01.jpg",
-        "link": "twitter.com/jimlynchcodes"
+        "link": "https://twitter.com/jimlynchcodes"
       },
       {
         "name": "Mary Jane",
         "img": "01.jpg",
-        "link": "twitter.com/jimlynchcodes"
+        "link": "https://twitter.com/jimlynchcodes"
       }
     ],
     "projects": [

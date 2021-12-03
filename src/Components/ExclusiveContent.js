@@ -22,7 +22,7 @@ class ExclusiveContent extends Component {
             <section id="resume" >
 
                 <Slide left duration={1300}>
-                    <div style={this.props.sillySquareBalance > 0 ? { background: "url('../images/stars.png')", backgroundRepeat: 'repeat' } :
+                    <div style={this.props.sillySquaresClubBalance > 0 ? { background: "url('../images/stars.png')", backgroundRepeat: 'repeat' } :
                         { backgroundColor: '#ebeeee' }}>
 
                         <div className="row text-center">
@@ -35,13 +35,29 @@ class ExclusiveContent extends Component {
                                 </h1>
                                 <br />
                                 <h2>
-                                    <span>You own ({this.props.sillySquareBalance}) Silly Squares Club NFTs.</span>
+                                    <span>You own:
+                                        <br />
+                                        <br />
+                                        (&nbsp;{this.props.sillySquaresClubBalance}&nbsp;) Original Silly Squares Club NFTs
+                                        <br />
+                                        <br />
+                                        and
+                                        <br />
+                                        <br />
+                                        (&nbsp;{this.props.sillySquaresSummertimeBalance}&nbsp;) Silly Squares Summertime NFTs.
+                                        <br />
+                                        <br />
+                                        <br />
+                                        Total Silly Squares Owned: (&nbsp;{this.props.sillySquaresClubBalance + this.props.sillySquaresSummertimeBalance}&nbsp;)
+                                        <br />
+                                        <br />
+                                    </span>
                                 </h2>
                                 <br />
                             </div>
                             <br />
 
-                            {this.props.sillySquareBalance < 1 &&
+                            {this.props.sillySquaresClubBalance < 1 &&
 
                                 <div style={{ border: '2px solid gold', backgroundColor: 'white', borderRadius: '20px', padding: '15px' }}>
                                     <p>
@@ -53,7 +69,7 @@ class ExclusiveContent extends Component {
                                 </div>
                             }
 
-                            {this.props.sillySquareBalance > 0 && <h2>
+                            {this.props.sillySquaresClubBalance > 0 && <h2>
                                 <div style={{ border: '2px solid gold', backgroundColor: 'white', borderRadius: '20px' }}>
                                     <br />
                                     You are a Silly Squares NFT holder!!
