@@ -35,7 +35,10 @@ class ExclusiveContent extends Component {
                                 </h1>
                                 <br />
                                 <h2>
-                                    <span>You own ({this.props.sillySquareBalance}) Silly Squares Club NFTs.</span>
+                                    <span>You own ({this.props.sillySquareBalance}) Original Silly Squares Club NFTs.</span>
+                                </h2>
+                                <h2>
+                                    <span>You own ({this.props.sillySquareSummertimeBalance}) Silly Squares Summertime NFTs.</span>
                                 </h2>
                                 <br />
                             </div>
