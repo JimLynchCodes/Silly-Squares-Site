@@ -20,16 +20,28 @@ class App extends Component {
     this.state = {
       foo: "bar",
       homePageData: {},
-      sillySquaresContract: undefined,
+      sillySquaresClubContract: undefined,
+      sillySquaresSummertimeContract: undefined,
       nftContractWithSigner: undefined,
       signer: undefined,
       currentUserAddress: '',
-      contractOwnerAddress: '',
-      sillySquareBalance: 0,
-      mintCostEth: 0,
-      mintCostWei: 0,
-      totalSupply: 0,
-      totalAlreadyMinted: 0
+      
+      sillySquaresClubContractOwnerAddress: '',
+      sillySquaresSummertimeContractOwnerAddress: '',
+      
+      sillySquaresClubBalance: 0,
+      sillySquaresSummertimeBalance: 0,
+      
+      mintCostWeiSquaresClub: 0, 
+      mintCostEthSquaresClub: 0,
+      mintCostWeiSquaresSummertime: 0,
+      mintCostEthSquaresSummertime: 0,
+      
+      totalSupplyClub: 0,
+      totalSupplySummertime: 0,
+
+      totalSquaresClubAlreadyMinted: 0,
+      totalSquaresSummertimeAlreadyMinted: 0
     };
 
     this.getHomePageData();
@@ -47,76 +59,99 @@ class App extends Component {
 
     const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-    // if (provider)
-
     console.log({ provider })
   
-    // Gets the public address of currently connected metamask user
     const signer =  provider.getSigner();
 
     const signerAddress = await signer.getAddress();
-    // console.log({ signerAddress });
 
     this.setState({ signer, currentUserAddress: signerAddress })
-
-    // const balance = await provider.getBalance();
-    // console.log({ balance })
 
     // TODO - get an instance of the Silly Squares Club contract (deployed on Polygon)
     //      - 0x4a2D1ee65060ee4f01B85c569076d90aFd1B9FF8
 
-
     const silly_squares_club_address = '0x4a2D1ee65060ee4f01B85c569076d90aFd1B9FF8';
+    
+    const silly_squares_summertime_address = '0x2f3356c0d03458ed1f6917236ab1311e770dbbc3';
 
     // Connect to the Silly Squares Contract
-    const sillySquaresContract = new ethers.Contract(
+    const sillySquaresClubContract = new ethers.Contract(
       silly_squares_club_address,
       SillySqauresABI,
       provider
     );
+    
+    const sillySquaresSummertimeContract = new ethers.Contract(
+      silly_squares_summertime_address,
+      SillySqauresABI,
+      provider
+    );
 
-    this.setState({ sillySquaresContract });
+    this.setState({ 
+      sillySquaresClubContract,
+      sillySquaresSummertimeContract
+    });
 
-    // const nftContractWithSigner = await sillySquaresContract.connect(this.state.signer);
+    const sillySquaresClubBalance = (await sillySquaresClubContract.balanceOf(signerAddress)).toNumber();
+    const sillySquaresSummertimeBalance = (await sillySquaresSummertimeContract.balanceOf(signerAddress)).toNumber();
 
-    // const contractWithSigner = await sillySquaresContract.connect(signer);
-
-    // this.setState({ nftContractWithSigner });
-
-    // console.log({ sillySquaresContract })
-
-    // Gets current user's balance of SILLY_SQUARES_CLUB tokens
-    //  (ie. how many of these NFTs the user owns)
-
-    const sillySquareBalance = (await sillySquaresContract.balanceOf(signerAddress)).toNumber();
-
-    console.log({ sillySquareBalance })
-    this.setState({ sillySquareBalance })
-
+    console.log({ sillySquaresClubBalance })
+    console.log({ sillySquaresSummertimeBalance })
+    
+    this.setState({ 
+      sillySquaresClubBalance,
+      sillySquaresSummertimeBalance
+    })
+    
     // Checks who is the contract owner (to know if you need to send payment when minting)
-    const contractOwnerAddress = await sillySquaresContract.owner();
+    const sillySquaresClubContractOwnerAddress = await sillySquaresClubContract.owner();
+    
+    const sillySquaresSummertimeContractOwnerAddress = await sillySquaresSummertimeContract.owner();
 
     console.log('got owner')
 
-    console.log({ contractOwnerAddress: contractOwnerAddress })
-    this.setState({ contractOwnerAddress })
+    console.log({ sillySquaresClubContractOwnerAddress: sillySquaresClubContractOwnerAddress });
+    console.log({ sillySquaresSummertimeContractOwnerAddress: sillySquaresSummertimeContractOwnerAddress });
+
+    this.setState({ 
+      sillySquaresClubContractOwnerAddress,
+      sillySquaresSummertimeContractOwnerAddress
+    })
 
     // Checks the price for minting a token
-    const mintCostWei = await sillySquaresContract.cost()
-    const mintCostEth = ethers.utils.formatEther(mintCostWei);
-
-    console.log({ mintCostEth })
-    this.setState({ mintCostEth, mintCostWei })
-
-    const totalAlreadyMinted = await sillySquaresContract.totalSupply();
-    this.setState({ totalAlreadyMinted: ethers.utils.formatUnits(totalAlreadyMinted, 'wei') })
-
+    const mintCostWeiSquaresClub = await sillySquaresClubContract.cost()
+    const mintCostEthSquaresClub = ethers.utils.formatEther(mintCostWeiSquaresClub);
     
-    const totalSupply = await sillySquaresContract.maxSupply();
+    const mintCostWeiSquaresSummertime = await sillySquaresSummertimeContract.cost()
+    const mintCostEthSquaresSummertime = ethers.utils.formatEther(mintCostWeiSquaresSummertime);
 
-    console.log('max supply! ',ethers.utils.formatUnits(totalSupply, 'wei') )
+    console.log({ mintCostEthSquaresClub: mintCostEthSquaresClub })
+    console.log({ mintCostEthSquaresSummertime: mintCostEthSquaresSummertime })
 
-    this.setState({ totalSupply: ethers.utils.formatUnits(totalSupply, 'wei') })
+    this.setState({ 
+      mintCostWeiSquaresClub, 
+      mintCostEthSquaresClub,
+      mintCostWeiSquaresSummertime,
+      mintCostEthSquaresSummertime
+    })
+
+    const totalSquaresClubAlreadyMinted = await sillySquaresClubContract.totalSupply();
+    const totalSquaresSummertimeAlreadyMinted = await sillySquaresClubContract.totalSupply();
+    
+    this.setState({ 
+      totalSquaresClubAlreadyMinted: ethers.utils.formatUnits(totalSquaresClubAlreadyMinted, 'wei'),
+      totalSquaresSummertimeAlreadyMinted: ethers.utils.formatUnits(totalSquaresSummertimeAlreadyMinted, 'wei')
+    })
+    
+    const totalSupplyClub = await sillySquaresClubContract.maxSupply();
+    const totalSupplySummertime = await sillySquaresSummertimeContract.maxSupply();
+
+    console.log('max supply! ',ethers.utils.formatUnits(totalSupplyClub, 'wei') )
+
+    this.setState({ 
+      totalSupplyClub: ethers.utils.formatUnits(totalSupplyClub, 'wei') ,
+      totalSupplySummertime: ethers.utils.formatUnits(totalSupplySummertime, 'wei') 
+    })
 
   }
 
@@ -164,25 +199,36 @@ class App extends Component {
         <Header data={this.state.homePageData.main} />
         <br/>
         <br/>
-        <br/>
-        <button onClick={() => this.mintTokens(2)}>Mint!!</button>
-        <br/>
-        <br/>
-        <br/>
+ 
         <br/>
         <br/>
         <About data={this.state.homePageData.main} />
         <NFTs data={this.state.homePageData.resume} />
         <Portfolio data={this.state.homePageData.portfolio} />
         <Mint data={this.state.homePageData.resume}
-                    nftContract={this.state.sillySquaresContract}
+                    collectionName='The Original Silly Squares Club'
+                    nftContract={this.state.sillySquaresClubContract}
                     signer={this.state.signer}
                     userAddress={this.state.currentUserAddress}
-                    contractOwnerAddress={this.state.contractOwnerAddress}
-                    totalAlreadyMinted={this.state.totalAlreadyMinted}
-                    totalSupply={this.state.totalSupply}
+                    contractOwnerAddress={this.state.sillySquaresClubContract}
+                    totalAlreadyMinted={this.state.totalSquaresClubAlreadyMinted}
+                    totalSupply={this.state.totalSupplyClub}
         />
-        <ExclusiveContent sillySquareBalance={this.state.sillySquareBalance} />
+        <br/>
+        <hr/>
+        <br/>
+        <Mint data={this.state.homePageData.resume}
+                    collectionName='Silly Squares Summertime Edition'
+                    nftContract={this.state.sillySquaresSummertimeContract}
+                    signer={this.state.signer}
+                    userAddress={this.state.currentUserAddress}
+                    contractOwnerAddress={this.state.sillySquaresSummertimeContractOwnerAddress}
+                    totalAlreadyMinted={this.state.totalSquaresSummertimeAlreadyMinted}
+                    totalSupply={this.state.totalSupplySummertime}
+        />
+        <ExclusiveContent sillySquaresClubBalance={this.state.sillySquaresClubBalance} 
+                          sillySquaresSummertimeBalance={this.state.sillySquaresSummertimeBalance}
+        />
         <Contact data={this.state.homePageData.main} />
         <Footer data={this.state.homePageData.main} />
       </div>

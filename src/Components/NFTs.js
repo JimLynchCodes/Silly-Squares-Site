@@ -23,10 +23,17 @@ class NFTs extends Component {
             {education.degree} <span>&bull;</span>
             <em className="date">{education.graduated}</em>
           </p>
-          {/* <p>{education.description}</p> */}
+          <p></p>
           <a href={education.openSeaLink}>Browse NFTs on OpenSea</a>
           <br />
           <br />
+          <h4>
+          Contract Address: <a href={education.polygonscanLink}>
+            {education.contractAddress}
+          </a>
+          <br/>
+          <br/>
+          </h4>
 
           {i !== this.props.data.education.length - 1 && <hr />}
 

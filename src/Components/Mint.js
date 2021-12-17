@@ -44,9 +44,6 @@ class Mint extends Component {
 
         setTimeout(() => {
 
-            //     console.log('ok', this.props.nftContractWithSigner)
-            //     console.log('ok', this.props.nftContract)
-
             const connectedContract = this.props.nftContract.connect(this.props.signer);
             this.setState({ connectedContract })
 
@@ -59,10 +56,6 @@ class Mint extends Component {
                 const tokenId = ethers.utils.formatUnits(token, 'wei')
 
                 console.log(tokenId);
-
-                // ethers.BigNumber.toString()
-
-                // alert("You successfully minted a new NFT!!\n\n You can view it at: ")
 
                 if (window.confirm('You successfully minted a new NFT!!\n\n Click "Ok" to view it on OpenSea!\n\n(Note: Traits and image may take a few minutes or hours for OpenSea to load)')) {
                     window.location.href = 'https://opensea.io/assets/matic/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8/' + tokenId;
@@ -165,15 +158,20 @@ class Mint extends Component {
                     <div className="">
 
                         <div className="row text-center">
-                            <h2>
-                                <span>Mint Here!</span>
-                            </h2>
+
+                            <h2>{this.props.collectionName}</h2>
+                            <br/>
+                            <h1><span>Mint Here!</span></h1>
+                            <br/>
+                            {this.props.collectionName}
+                            <br/>
+                            <br/>
                             <h3>
-                                <span>( {this.props.totalAlreadyMinted} ) of ( {this.props.totalSupply} ) remaining to be minted!</span>
-                            </h3>
+                                <span>( {this.props.totalAlreadyMinted} ) of ( {this.props.totalSupply} ) have been minted!</span>
+                            </h3> 
                             <br />
                             <p>
-                                Click the "mint" button to generate a new random NFT in the Silly Squares Summertime collection!
+                                Click the "mint" button to generate a new random NFT from {this.props.collectionName} collection!
                             </p>
                             <br />
                             <h3>

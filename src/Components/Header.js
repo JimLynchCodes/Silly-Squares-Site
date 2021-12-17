@@ -8,6 +8,9 @@ class Header extends Component {
 
     const purchase = this.props.data.purchaseLink;
     const enterClubLink = this.props.data.enterClubLink;
+    
+    const purchaseSquaresClubLink = this.props.data.purchaseSquaresClubLink;
+    const purchaseSquaresSummertimeLink = this.props.data.purchaseSquaresSummertimeLink;
     const name = this.props.data.name;
     const description = this.props.data.description;
 
@@ -74,12 +77,15 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={purchase} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Purchase Silly Squares
+                <a href={purchaseSquaresClubLink} className="button btn project-btn">
+                  <i className="fa fa-book"></i>Original Silly Squares Club
                 </a>
-                <a href={enterClubLink} className="button btn github-btn">
+                <a href={purchaseSquaresSummertimeLink} className="button btn project-btn">
+                  <i className="fa fa-anchor"></i>Silly Squares Summertime
+                </a>
+                {/* <a href={enterClubLink} className="button btn github-btn">
                   <i className="fa fa-globe"></i>Enter The Club
-                </a>
+                </a> */}
               </ul>
             </Fade>
           </div>
