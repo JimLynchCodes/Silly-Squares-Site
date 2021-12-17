@@ -31,6 +31,7 @@ class App extends Component {
       
       sillySquaresClubBalance: 0,
       sillySquaresSummertimeBalance: 0,
+      sillySquaresTotalBalance: 0,
       
       mintCostWeiSquaresClub: 0, 
       mintCostEthSquaresClub: 0,
@@ -94,13 +95,16 @@ class App extends Component {
 
     const sillySquaresClubBalance = (await sillySquaresClubContract.balanceOf(signerAddress)).toNumber();
     const sillySquaresSummertimeBalance = (await sillySquaresSummertimeContract.balanceOf(signerAddress)).toNumber();
-
+    
     console.log({ sillySquaresClubBalance })
     console.log({ sillySquaresSummertimeBalance })
+
+    const sillySquaresTotalBalance = sillySquaresClubBalance + sillySquaresSummertimeBalance;
     
     this.setState({ 
       sillySquaresClubBalance,
-      sillySquaresSummertimeBalance
+      sillySquaresSummertimeBalance,
+      sillySquaresTotalBalance
     })
     
     // Checks who is the contract owner (to know if you need to send payment when minting)
@@ -226,7 +230,8 @@ class App extends Component {
                     totalAlreadyMinted={this.state.totalSquaresSummertimeAlreadyMinted}
                     totalSupply={this.state.totalSupplySummertime}
         />
-        <ExclusiveContent sillySquaresClubBalance={this.state.sillySquaresClubBalance} 
+        <ExclusiveContent sillySquaresTotalBalance={this.state.sillySquaresTotalBalance} 
+                          sillySquaresClubBalance={this.state.sillySquaresClubBalance} 
                           sillySquaresSummertimeBalance={this.state.sillySquaresSummertimeBalance}
         />
         <Contact data={this.state.homePageData.main} />

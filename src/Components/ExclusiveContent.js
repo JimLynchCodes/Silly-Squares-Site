@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
 import { ethers } from "ethers";
-
+import Calendly from './Calendly';
+import './ExclusiveContent.css';
 
 class ExclusiveContent extends Component {
 
@@ -9,20 +10,15 @@ class ExclusiveContent extends Component {
 
         super(props);
 
-        this.state = {
-
-        };
-
-
+        this.state = {};
     }
-
 
     render() {
         return (
-            <section id="resume" >
+            <section >
 
                 <Slide left duration={1300}>
-                    <div style={this.props.sillySquaresClubBalance > 0 ? { background: "url('../images/stars.png')", backgroundRepeat: 'repeat' } :
+                    <div style={this.props.sillySquaresTotalBalance > 0 ? { background: "url('../images/stars.png')", backgroundRepeat: 'repeat' } :
                         { backgroundColor: '#ebeeee' }}>
 
                         <div className="row text-center">
@@ -48,7 +44,7 @@ class ExclusiveContent extends Component {
                                         <br />
                                         <br />
                                         <br />
-                                        Total Silly Squares Owned: (&nbsp;{this.props.sillySquaresClubBalance + this.props.sillySquaresSummertimeBalance}&nbsp;)
+                                        Total Silly Squares Owned: (&nbsp;{this.props.sillySquaresTotalBalance}&nbsp;)
                                         <br />
                                         <br />
                                     </span>
@@ -57,7 +53,7 @@ class ExclusiveContent extends Component {
                             </div>
                             <br />
 
-                            {this.props.sillySquaresClubBalance < 1 &&
+                            {this.props.sillySquaresTotalBalance < 1 &&
 
                                 <div style={{ border: '2px solid gold', backgroundColor: 'white', borderRadius: '20px', padding: '15px' }}>
                                     <p>
@@ -69,8 +65,12 @@ class ExclusiveContent extends Component {
                                 </div>
                             }
 
-                            {this.props.sillySquaresClubBalance > 0 && <h2>
-                                <div style={{ border: '2px solid gold', backgroundColor: 'white', borderRadius: '20px' }}>
+                            {this.props.sillySquaresTotalBalance > 0 && <h2>
+                                <div style={{ 
+                                    border: '2px solid gold', 
+                                    backgroundColor: 'white', 
+                                    borderRadius: '20px'
+                                    }}>
                                     <br />
                                     You are a Silly Squares NFT holder!!
 
@@ -86,12 +86,20 @@ class ExclusiveContent extends Component {
                                 <img src='../images/zebra.jpg' />
                                 <br />
                                 <br />
+                                <br />
 
+                                <div className="awesomeness-header">
+                                    <br/>
+                                    <h2>Awesomeness Consulting Scheduler</h2>
+                                    <br/>
+                                    <p>Exclusively for Silly Squares holders!</p>
+                                </div>
+
+                                <Calendly 
+                                    height='700px'
+                                    url='https://calendly.com/everybodycodes/awesomeness-consulting'/>
 
                             </h2>}
-                            <br />
-                            <br />
-                            <br />
                             <br />
                             <br />
                             <br />
