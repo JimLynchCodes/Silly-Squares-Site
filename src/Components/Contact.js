@@ -11,6 +11,7 @@ class Contact extends Component {
     const state = this.props.data.address.state;
     const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
+    const email = this.props.data.email;
     const message = this.props.data.contactmessage;
 
     return (
@@ -30,8 +31,8 @@ class Contact extends Component {
         </Fade>
 
         <div className="row">
-          <Slide left duration={1000}>
-            <div className="eight columns">
+          <Slide center duration={1000}>
+            {/* <div className="eight columns">
               <form action="" method="post" id="contactForm" name="contactForm">
                 <fieldset>
                   <div>
@@ -100,11 +101,11 @@ class Contact extends Component {
                 <i className="fa fa-check"></i>Your message was sent, thank you!
                 <br />
               </div>
-            </div>
+            </div> */}
           </Slide>
 
           <Slide right duration={1000}>
-            <aside className="four columns footer-widgets">
+            <aside className="columns footer-widgets">
               <div className="widget widget_contact">
                 <h4>Headquarters</h4>
                 <p className="address">
@@ -113,7 +114,13 @@ class Contact extends Component {
                   {street} <br />
                   {city}, {state} {zip}
                   <br />
+                  <br />
                   <span>{phone}</span>
+                  <br />
+                  <br />
+                  <span>{email}</span>
+                  <br />
+                  <br />
                 </p>
               </div>
 

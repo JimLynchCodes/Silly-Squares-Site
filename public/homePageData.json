@@ -1,214 +1,234 @@
 {
   "main": {
-    "name":"Silly Squares Club",
-    "description":"Awesome NFTs, people, and perks",
-    "image":"profilepic.jpg",
-    "bio":"Silly Squares Club began as just a silly idea Jim had one day after hearing yet again about some generative art NFT collection that was simply \"images on the blockchain\". While Silly Squares is silly on the surface, it pushes the boundary of what's possible with NFTs and give holders exclusive access to hidden sections on this website, free swag, personalized consulting sessions with Jim, and more!",
-    "contactmessage":"We'd love to hear from you! You can email us, call us, and even send us a postcard!",
-    "email": "youremailhere@gmail.com",
-    "phone": "917-745-3133",
-    "enterClubLink":"/members",
-    "purchaseLink":"https://opensea.io/collection/silly-squares-club",
+    "name": "Silly Squares Club",
+    "description": "Awesome NFTs, people, and perks",
+    "image": "profilepic.jpg",
+    "bio": "Silly Squares Club began as just a silly idea Jim had one day after hearing yet again about some generative art NFT collection that was simply \"images on the blockchain\". While Silly Squares is silly on the surface, it pushes the boundary of what's possible with NFTs and give holders exclusive access to hidden sections on this website, free swag, personalized consulting sessions with Jim, and more!",
+    "contactmessage": "We'd love to hear from you! You can email us, call us, and even send us a postcard!",
+    "email": "jim.lynch@evaluates2.com",
+    "phone": "(917) 745 3133",
+    "enterClubLink": "/members",
+    "purchaseLink": "https://opensea.io/collection/silly-squares-club",
     "purchaseSquaresClubLink": "https://opensea.io/collection/silly-squares-club",
     "purchaseSquaresSummertimeLink": "https://opensea.io/collection/silly-squares-summertime",
-    "address":{
-      "street":"711 E 2nd Ave",
-      "city":"New York",
-      "state":"New York",
+    "address": {
+      "street": "711 E 2nd Ave",
+      "city": "New York",
+      "state": "New York",
       "zip": "10016"
     },
     "website": "",
-    "resumedownload":"",
-    "social":[
+    "resumedownload": "",
+    "social": [
       {
-        "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
-        "className":"fa fa-facebook"
+        "name": "facebook",
+        "url": "https://github.com/nordicgiant2/react-nice-resume",
+        "className": "fa fa-facebook"
       },
       {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
+        "name": "twitter",
+        "url": "http://twitter.com",
+        "className": "fa fa-twitter"
       },
       {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
-        "className":"fa fa-linkedin"
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/tim-baker-8420009a/",
+        "className": "fa fa-linkedin"
       },
       {
-        "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
+        "name": "instagram",
+        "url": "http://instagram.com/tbaker_x",
+        "className": "fa fa-instagram"
       },
       {
-        "name":"github",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
-        "className":"fa fa-github"
+        "name": "github",
+        "url": "https://github.com/nordicgiant2/react-nice-resume",
+        "className": "fa fa-github"
       }
     ]
   },
-  "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
-    "education":[
+  "resume": {
+    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "openSource": [
       {
-        "school":"SILLY SQUARES CLUB",
-        "degree":"The original silly squares collection.",
-        "graduated":"Total Supply: 250",
-        "openSeaLink": "https://opensea.io/collection/silly-squares-club",
-        "contractAddress": "0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8",
-        "polygonscanLink": "https://polygonscan.com/address/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8"
-      },
-      {
-        "school":"SILLY SQUARES SUMMERTIME",
-        "degree":"A tribute to that summertime feeling.",
-        "graduated":"Total Supply: 2500",
-        "openSeaLink": "https://opensea.io/collection/silly-squares-summertime",
-        "contractAddress": "0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
-        "polygonscanLink": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3"
+        "info": "All the code for this website and the Silly Squares NFT collections are free and open-source, publicly released on Github with the GNU v3 General Public Lecense.",
+        "siteSourceCodeLink": "https://github.com/JimLynchCodes/Silly-Squares-Site"
       }
     ],
-    "work":[
+    "education": [
       {
-        "company":"Solidity Expertise",
-        "title":"Clean code that works",
-        "years":"https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
-        "contractLink":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
+        "school": "SILLY SQUARES CLUB",
+        "degree": "The original silly squares collection.",
+        "graduated": "Total Supply: 250",
+        "openSeaLink": "https://opensea.io/collection/silly-squares-club",
+        "contractAddress": "0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8",
+        "polygonscanLink": "https://polygonscan.com/address/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8",
+        "contractSourceCodeLink": "https://github.com/JimLynchCodes/Square-NFTs/tree/main/Original_Silly_Squares_Club",
+        "nf1Image": "images/squares/ss-109.png",
+        "nf2Image": "images/squares/ss-129.png",
+        "nf3Image": "images/squares/ss-133.png",
+        "nf1Link": "https://opensea.io/assets/matic/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8/109",
+        "nf2Link": "https://opensea.io/assets/matic/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8/129",
+        "nf3Link": "https://opensea.io/assets/matic/0x4a2d1ee65060ee4f01b85c569076d90afd1b9ff8/133"
+      },
+      {
+        "school": "SILLY SQUARES SUMMERTIME",
+        "degree": "A tribute to that summertime feeling.",
+        "graduated": "Total Supply: 2500",
+        "openSeaLink": "https://opensea.io/collection/silly-squares-summertime",
+        "contractAddress": "0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "polygonscanLink": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "contractSourceCodeLink": "https://github.com/JimLynchCodes/Square-NFTs/tree/main/Silly_Squares_Summertime",
+        "nf1Image": "images/squares/sss-325.png",
+        "nf2Image": "images/squares/sss-231.png",
+        "nf3Image": "images/squares/sss-223.png",
+        "nf1Link": "https://opensea.io/assets/matic/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3/325",
+        "nf2Link": "https://opensea.io/assets/matic/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3/231",
+        "nf3Link": "https://opensea.io/assets/matic/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3/223"
+      }
+    ],
+    "work": [
+      {
+        "company": "Solidity Expertise",
+        "title": "Clean code that works",
+        "years": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "contractLink": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
         "description": "Lead developer Jim Lynch has been studying and teaching Solidity coding and unit testing, and he practices what he preaches! This project is a living example of how to leverage the tools of Consensys, OpenZeppelin, and other great open-source projects to build something awesome and secure!"
       },
       {
-        "company":"Built On Polygon",
-        "title":"Say goodbye to gas fees",
-        "years":"https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
+        "company": "Built On Polygon",
+        "title": "Say goodbye to gas fees",
+        "years": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
         "contractLink": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
         "description": "ALL Silly Squares NFTs have been deployed on the Polygon blockchain, a layer 2 Ethereum blockchain. The key advantage of this is that gas costs to trade and list these NFTs are INSANELY LOW! (like less than one cent USD per transaction)."
       }
     ],
-    "skills":[
+    "skills": [
       {
-        "name":"Python",
-        "level":"60%"
+        "name": "Python",
+        "level": "60%"
       },
       {
-        "name":"VueJs",
-        "level":"55%"
+        "name": "VueJs",
+        "level": "55%"
       },
       {
-        "name":"ReactJs",
-        "level":"50%"
+        "name": "ReactJs",
+        "level": "50%"
       },
       {
-        "name":"CSS",
-        "level":"90%"
+        "name": "CSS",
+        "level": "90%"
       },
       {
-        "name":"PHP",
-        "level":"80%"
+        "name": "PHP",
+        "level": "80%"
       },
       {
-        "name":"Swift",
-        "level":"50%"
+        "name": "Swift",
+        "level": "50%"
       },
       {
-        "name":"JAVA",
-        "level":"80%"
+        "name": "JAVA",
+        "level": "80%"
       }
     ]
   },
-  "portfolio":{
+  "portfolio": {
     "team": [
       {
         "name": "Jim",
-        "img": "01.jpg",
+        "img": "jim-lynch-headshot.png",
         "link": "https://twitter.com/jimlynchcodes"
       },
       {
-        "name": "Brodi",
-        "img": "01.jpg",
-        "link": "https://twitter.com/jimlynchcodes"
+        "name": "Nina",
+        "img": "nina.jpg",
+        "link": "https://twitter.com/ninanet"
       },
       {
-        "name": "Craig",
-        "img": "01.jpg",
-        "link": "https://twitter.com/jimlynchcodes"
+        "name": "Dan",
+        "img": "dan.jpeg",
+        "link": "https://twitter.com/everybody_codes"
       },
       {
-        "name": "Mary Jane",
-        "img": "01.jpg",
-        "link": "https://twitter.com/jimlynchcodes"
+        "name": "Jay",
+        "img": "jay.jpg",
+        "link": "https://twitter.com/jbrooooooo"
       }
     ],
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"01.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "01.jpg",
+        "url": "https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "02.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "03.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"NFTs Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "NFTs Website",
+        "category": "A React based resume website template",
+        "image": "04.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "05.jpg",
+        "url": "http://www.smirkspace.com"
       },
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "06.jpg",
+        "url": "https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"01.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "01.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "02.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "03.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"NFTs Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "NFTs Website",
+        "category": "A React based resume website template",
+        "image": "04.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "05.jpg",
+        "url": "http://www.smirkspace.com"
       },
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "06.jpg",
+        "url": "https://www.canadianwanderlust.com"
       }
     ]
   }

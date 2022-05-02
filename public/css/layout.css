@@ -616,7 +616,7 @@ ul#nav li.current a { color: #fe6928; }
    color: inherit;
 }
 #call-to-action p {
-   color: #636363;
+   color: #f2f2f2;
    font-size: 17px;
 }
 /*#
@@ -792,7 +792,7 @@ call-to-action .button {
    background: #191919;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
+   color: #f2f2f2;
 }
 #contact .section-head { margin-bottom: 42px; }
 
@@ -824,7 +824,7 @@ call-to-action .button {
    margin-bottom: 6px;
 }
 #contact p.lead {
-   font: 18px/36px 'opensans-light', sans-serif;
+   font: 25px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
 }
 #contact .header-col { padding-top: 6px; }
@@ -941,12 +941,14 @@ footer a:hover, footer a:focus { color: #fff; }
 footer .copyright {
     margin: 0;
     padding: 0;
+    color: #f2f2f2;
  }
 footer .copyright li {
     display: inline-block;
     margin: 0;
     padding: 0;
     line-height: 24px;
+    font-size: 3 rem;
 }
 .ie footer .copyright li {
    display: inline;

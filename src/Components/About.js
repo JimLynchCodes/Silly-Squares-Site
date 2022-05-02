@@ -42,25 +42,22 @@ class About extends Component {
                     <br />
                     <ul>
                       <li>
-                        • Members page of this site, connected to MetaMask.
+                        •	✅ View your Silly Squares balances on this site.
                       </li>
                       <li>
-                        • Hoodies and other swag- with a free piece for every silly square holder!
+                        • ✅ Free awesomeness consulting registration form for Square holders.
                       </li>
                       <li>
-                        • Streamlined awesomeness consulting registration calendar form.
+                        • ✅ Parties at the blockchain center in New York City!
                       </li>
                       <li>
-                        • 3d metaverse experience where you can play as the silly squares you own.
+                        • ✅ Regular crypto airdrops for Square holders!
                       </li>
                       <li>
-                        • Support for even more types of wallets.
+                        • [&nbsp;&nbsp;] Hoodies and other swag- with a free piece for every silly square holder!
                       </li>
                       <li>
-                        • Release our own ERC20 governance token.
-                      </li>
-                      <li>
-                        • Host parties in NYC, Miami, and LA allowing entry with proof of silly square ownership.
+                        • [&nbsp;&nbsp;] 3d metaverse experience where you can play as the silly squares you own.
                       </li>
                     </ul>
                   </p>

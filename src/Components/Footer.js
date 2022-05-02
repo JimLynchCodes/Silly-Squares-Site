@@ -20,10 +20,11 @@ class Footer extends Component {
         <div className="row">
           <Fade bottom>
             <div className="twelve columns">
-              <ul className="social-links">{networks}</ul>
+              {/* <ul className="social-links">{networks}</ul> */}
 
+              <br/>
               <ul className="copyright">
-                <li>&copy; Copyright 2021 Silly Squares Club</li>
+                <li>Silly Squares Club &copy; 2020-2022</li>
               </ul>
             </div>
           </Fade>

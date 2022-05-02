@@ -133,7 +133,7 @@ class App extends Component {
     console.log({ mintCostEthSquaresSummertime: mintCostEthSquaresSummertime })
 
     this.setState({ 
-      mintCostWeiSquaresClub, 
+      mintCostWeiSquaresClub,
       mintCostEthSquaresClub,
       mintCostWeiSquaresSummertime,
       mintCostEthSquaresSummertime
@@ -156,29 +156,6 @@ class App extends Component {
       totalSupplyClub: ethers.utils.formatUnits(totalSupplyClub, 'wei') ,
       totalSupplySummertime: ethers.utils.formatUnits(totalSupplySummertime, 'wei') 
     })
-
-  }
-
-   // TODO - allow users to call the contract's "mint" function
-   async mintTokens(tokensToMint) {
-
-    const totalCost = tokensToMint * this.state.mintCostWei;
-
-    const overrides = {}
-
-    if (this.state.currentUserAddress !== this.state.contractOwnerAddress)
-      overrides.value = totalCost.toString();
-    else {
-      overrides.value = 0;
-      console.log('called by owner... not charging to mint!')
-    }
-
-    console.log('args')
-    console.log(this.state.currentUserAddress, tokensToMint, overrides)
-
-    // const n = this.state.sillySquaresContract.connect(this.state.signer);
-
-    // await n.mint(this.state.currentUserAddress, tokensToMint, overrides);
 
   }
 

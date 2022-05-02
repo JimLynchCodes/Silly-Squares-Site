@@ -12,10 +12,10 @@ class Portfolio extends Component {
 
       return (
         <div key={id++} className="columns ">
-          <div className="item-wrap">
+          <div className="item-wrap text-center">
             <a href={teammate.link}>
 
-            <img alt={teammate.name} src={projectImage} />
+            <img alt={teammate.name} src={projectImage} className="team-img"/>
             </a>
             <div style={{ textAlign: "center" }}>{teammate.name}</div>
           </div>

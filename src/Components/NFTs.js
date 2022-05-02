@@ -15,6 +15,22 @@ class NFTs extends Component {
     if (!this.props.data) return null;
 
     const skillmessage = this.props.data.skillmessage;
+
+    const openSource = this.props.data.openSource.map((openSource, i) => {
+      return (
+        <div key={'k' + i}>
+          <h3>Free & Open-Source</h3>
+          <p className="info">
+            {openSource.info} <span>&bull;</span>
+          </p>
+          <p></p>
+          <a href={openSource.siteSourceCodeLink}>{openSource.siteSourceCodeLink}</a>
+          <br />
+          <br />
+        </div>
+      );
+    });
+
     const education = this.props.data.education.map((education, i) => {
       return (
         <div key={education.school}>
@@ -24,15 +40,41 @@ class NFTs extends Component {
             <em className="date">{education.graduated}</em>
           </p>
           <p></p>
-          <a href={education.openSeaLink}>Browse NFTs on OpenSea</a>
+
+          <div className="row nft-img-row">
+            <a href={education.nf1Link}>
+              <img className="square-img"
+                src={education.nf1Image}></img>
+            </a>
+            <a href={education.nf2Link}>
+              <img className="square-img"
+                src={education.nf2Image}></img>
+            </a>
+            <a href={education.nf3Link}>
+              <img className="square-img"
+                src={education.nf3Image}></img>
+            </a>
+          </div>
+
+          <a href={education.openSeaLink}>Browse the entire collection on OpenSea!</a>
           <br />
           <br />
           <h4>
-          Contract Address: <a href={education.polygonscanLink}>
-            {education.contractAddress}
-          </a>
-          <br/>
-          <br/>
+            Contract Address: <a href={education.polygonscanLink}>
+              {education.contractAddress}
+            </a>
+            <br />
+            <br />
+          </h4>
+
+          {/* {i !== this.props.data.education.length - 1 && <hr />} */}
+
+          <h4>
+            Source Code:<br /><a href={education.contractSourceCodeLink}>
+              {education.contractSourceCodeLink}
+            </a>
+            <br />
+            <br />
           </h4>
 
           {i !== this.props.data.education.length - 1 && <hr />}
@@ -74,6 +116,22 @@ class NFTs extends Component {
 
     return (
       <section id="resume">
+        <Slide left duration={1300}>
+          <div className="row education">
+            <div className="three columns header-col">
+              <h1>
+                <span>Open-Source</span>
+              </h1>
+            </div>
+
+            <div className="nine columns main-col">
+              <div className="row item">
+                <div className="twelve columns">{openSource}</div>
+              </div>
+            </div>
+          </div>
+        </Slide>
+
         <Slide left duration={1300}>
           <div className="row education">
             <div className="three columns header-col">
