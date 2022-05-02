@@ -13,6 +13,8 @@ import { ethers } from "ethers";
 import SillySqauresABI from './contract-ABIs/Silly_Squares_NFT_ABI.json';
 import ExclusiveContent from "./Components/ExclusiveContent";
 
+const EXPECTED_CHAIN = 80001;
+
 class App extends Component {
 
   constructor(props) {
@@ -61,6 +63,16 @@ class App extends Component {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
 
     console.log({ provider })
+
+    const { chainId } = await provider.getNetwork()
+
+    console.log({ chainId })
+
+    if (chainId === EXPECTED_CHAIN) {
+      console.log('ON POLYGON MAINNET')
+    } else {
+      console.log('NOT on POLYGON MAINNET')
+    }
   
     const signer =  provider.getSigner();
 
