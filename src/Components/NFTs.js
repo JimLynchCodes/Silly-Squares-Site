@@ -115,7 +115,7 @@ class NFTs extends Component {
     // });
 
     return (
-      <section id="resume">
+      <section id="resume" className="resume">
         <Slide left duration={1300}>
           <div className="row education">
             <div className="three columns header-col">

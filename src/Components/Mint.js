@@ -152,7 +152,7 @@ class Mint extends Component {
 
     render() {
         return (
-            <section id="resume" >
+            <section id="mint" className="resume" >
 
                 <Slide left duration={1300}>
                     <div className="">
