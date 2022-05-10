@@ -276,6 +276,16 @@ ul#nav li.current a { color: #fe6928; }
    margin-top: 6px;
 }
 
+.small-padding {
+   padding-top: 20px;
+   padding-bottom: 0px;
+}
+
+.small-top-padding {
+   padding-top: 0px;
+   margin-top: 0px;
+}
+
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/

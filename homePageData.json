@@ -51,7 +51,7 @@
     "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
     "openSource": [
       {
-        "info": "All the code for this website and the Silly Squares NFT collections are free and open-source, publicly released on Github with the GNU v3 General Public Lecense.",
+        "info": "All the code for this website and the Silly Squares NFT collections are free and open-source, publicly released on Github with the GNU v3 General Public License.",
         "siteSourceCodeLink": "https://github.com/JimLynchCodes/Silly-Squares-Site"
       }
     ],
@@ -93,14 +93,14 @@
         "title": "Clean code that works",
         "years": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
         "contractLink": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
-        "description": "Lead developer Jim Lynch has been studying and teaching Solidity coding and unit testing, and he practices what he preaches! This project is a living example of how to leverage the tools of Consensys, OpenZeppelin, and other great open-source projects to build something awesome and secure!"
+        "description": "Software extraordinaire and TDD enthusiast Jim Lynch has created this project a living example of how to leverage the tools of Consensys, OpenZeppelin, and the Web3 community to build something awesome!"
       },
       {
         "company": "Built On Polygon",
         "title": "Say goodbye to gas fees",
         "years": "https://polygonscan.com/address/0x2f3356c0d03458ed1f6917236ab1311e770dbbc3",
         "contractLink": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.",
-        "description": "ALL Silly Squares NFTs have been deployed on the Polygon blockchain, a layer 2 Ethereum blockchain. The key advantage of this is that gas costs to trade and list these NFTs are INSANELY LOW! (like less than one cent USD per transaction)."
+        "description": "The Silly Squares NFT collections are deployed on the Polygon blockchain, a popular layer 2 Ethereum blockchain with extremely low gas costs."
       }
     ],
     "skills": [
