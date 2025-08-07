@@ -5,7 +5,7 @@ This repo is the frontend React website / webapp for the Silly Squares Club.
 It is an example of a browser application that calls to a live Smart Contract hosted on the polygon network.
 
 
-Live url: (not yet delpoyed)
+Live url: [[not yet delpoyed](https://sillysquaresnft.com)](https://sillysquaresnft.com/)
 
 
 # Setup
